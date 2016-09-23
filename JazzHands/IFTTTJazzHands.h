@@ -45,3 +45,5 @@ FOUNDATION_EXPORT const unsigned char IFTTTJazzHandsVersionString[];
 #import "IFTTTConstraintConstantAnimation.h"
 #import "IFTTTScrollViewPageConstraintAnimation.h"
 #import "IFTTTConstraintMultiplierAnimation.h"
+
+#import "UIView+IFTTTJazzHands.h"

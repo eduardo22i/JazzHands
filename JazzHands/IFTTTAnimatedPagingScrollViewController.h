@@ -17,8 +17,10 @@
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, assign) CGFloat pageOffset;
 
-@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfPages;
+//@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger numberOfPages;
 @property (NS_NONATOMIC_IOSONLY, readonly) CGFloat pageWidth;
+
+- (NSUInteger)numberOfPages;
 
 - (void)animateCurrentFrame;
 - (CGFloat)centerXMultiplierForPage:(CGFloat)page;
