@@ -1,15 +1,21 @@
 //
 //  IFTTTJazzHands.h
-//  JazzHands
+//  IFTTTJazzHands
 //
-//  Created by Devin Foley on 9/28/13.
-//  Copyright (c) 2013 IFTTT Inc. All rights reserved.
+//  Created by Eduardo Irias on 9/23/16.
+//  Copyright © 2016 IFTTT. All rights reserved.
 //
 
-#pragma once
-
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+//! Project version number for JazzHands.
+FOUNDATION_EXPORT double IFTTTJazzHandsVersionNumber;
+
+//! Project version string for JazzHands.
+FOUNDATION_EXPORT const unsigned char IFTTTJazzHandsVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <JazzHands/PublicHeader.h>
+
 
 #import "IFTTTAnimator.h"
 #import "IFTTTInterpolatable.h"
