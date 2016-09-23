@@ -1,1 +1,0 @@
-../../../../../JazzHands/IFTTTAnimatedScrollViewController.h
