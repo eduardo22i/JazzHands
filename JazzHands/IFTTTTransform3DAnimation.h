@@ -38,7 +38,7 @@ typedef struct IFTTTTransform3DRotate IFTTTTransform3DRotate;
 @property (nonatomic, assign) IFTTTTransform3DTranslate translate;
 
 + (instancetype)transformWithM34:(CGFloat)m34;
-- (id)initWithM34:(CGFloat)m34;
+- (instancetype)initWithM34:(CGFloat)m34;
 
 @end
 

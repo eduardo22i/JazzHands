@@ -24,16 +24,16 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    CGFloat degrees = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    CGFloat degrees = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
     CGFloat radians = degrees * (CGFloat)(M_PI / -180.0);
     CGAffineTransform rotationTransform = CGAffineTransformMakeRotation(radians);
     self.view.iftttRotationTransform = [NSValue valueWithCGAffineTransform:rotationTransform];
     CGAffineTransform newTransform = rotationTransform;
     if (self.view.iftttScaleTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttScaleTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttScaleTransform).CGAffineTransformValue);
     }
     if (self.view.iftttTranslationTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttTranslationTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttTranslationTransform).CGAffineTransformValue);
     }
     self.view.transform = newTransform;
 }

@@ -10,23 +10,21 @@ Jazz Hands is a simple keyframe-based animation framework for UIKit. Animations 
 
 Jazz Hands is used extensively in [IF and DO by IFTTT for iPhone and iPad](https://ifttt.com/products), most famously in the app intro.
 
-##Demo App
+## Demo App
 
-Open `JazzHandsDemo.xcworkspace` to see a simple demonstration of moving, scaling, fading, and transforming views in a scrolling app intro.
+Open `Example/JazzHandsDemo.xcodeproj` to see a simple demonstration of moving, scaling, fading, and transforming views in a scrolling app intro.
 
-To run the example project, clone the repo, and run `pod install` from the `Example` directory.
-
-##JazzHands in Swift
+## JazzHands in Swift
 
 Looking to incorporate Jazz Hands into your Swift project? Check out [`RazzleDazzle`](https://github.com/IFTTT/RazzleDazzle), our brand new scrolling keyframe animations library reimagined in Swift.
 
-##Installation
+## Installation
 
-`JazzHands` is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your `Podfile`:
+`JazzHands` is available through [Carthage](https://github.com/Carthage/Carthage). To install
+it, simply add the following line to your `Cartfile`:
 
 ```
-pod "JazzHands"
+github "eduardo22i/JazzHands"
 ```
 
 You may alternatively just copy the contents of the `JazzHands` folder into your project.
@@ -173,6 +171,7 @@ Looking for libraries to build awesome keyframe animations like JazzHands on And
 
 * [Devin Foley](https://github.com/devinfoley), creator.
 * [Laura Skelton](https://github.com/lauraskelton)
+* [Eduardo Irías](https://github.com/eduardo22i)
 
 ## Contributing
 

@@ -17,7 +17,7 @@
 @property (nonatomic, strong) id<IFTTTInterpolatable> value;
 @property (nonatomic, copy) IFTTTEasingFunction easingFunction;
 
-- (instancetype)initWithTime:(CGFloat)time value:(id)value easingFunction:(IFTTTEasingFunction)easingFunction;
+- (instancetype)initWithTime:(CGFloat)time value:(id)value easingFunction:(IFTTTEasingFunction)easingFunction ;
 
 @end
 
@@ -93,7 +93,7 @@
 - (NSUInteger)indexOfKeyframeAfterTime:(CGFloat)time
 {
     for (NSUInteger i = 0; i < self.keyframes.count; i++) {
-        IFTTTKeyframe *keyframe = (IFTTTKeyframe *)[self.keyframes objectAtIndex:i];
+        IFTTTKeyframe *keyframe = (IFTTTKeyframe *)(self.keyframes)[i];
         if (time < keyframe.time) {
             return i;
         }

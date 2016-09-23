@@ -16,6 +16,14 @@
 
 @implementation IFTTTHideAnimation
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 + (instancetype)animationWithView:(UIView *)view hideAt:(CGFloat)time
 {
     IFTTTHideAnimation *animation = [[[self class] alloc] initWithView:view
@@ -53,7 +61,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    self.view.hidden = (BOOL)[(NSNumber *)[self valueAtTime:time] boolValue];
+    self.view.hidden = (BOOL)((NSNumber *)[self valueAtTime:time]).boolValue;
 }
 
 @end

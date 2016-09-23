@@ -16,6 +16,6 @@
 - (void)addKeyframeForTime:(CGFloat)time value:(id<IFTTTInterpolatable>)value;
 - (void)addKeyframeForTime:(CGFloat)time value:(id<IFTTTInterpolatable>)value withEasingFunction:(IFTTTEasingFunction)easingFunction;
 - (id<IFTTTInterpolatable>)valueAtTime:(CGFloat)time;
-- (BOOL)hasKeyframes;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL hasKeyframes;
 
 @end

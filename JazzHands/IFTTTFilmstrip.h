@@ -12,7 +12,7 @@
 
 @interface IFTTTFilmstrip : NSObject
 
-- (BOOL)isEmpty;
+@property (NS_NONATOMIC_IOSONLY, getter=isEmpty, readonly) BOOL empty;
 - (void)setValue:(id<IFTTTInterpolatable>)value atTime:(CGFloat)time;
 - (void)setValue:(id<IFTTTInterpolatable>)value atTime:(CGFloat)time withEasingFunction:(IFTTTEasingFunction)easingFunction;
 - (id<IFTTTInterpolatable>)valueAtTime:(CGFloat)time;

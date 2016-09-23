@@ -32,7 +32,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    self.view.alpha = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    self.view.alpha = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
 }
 
 @end

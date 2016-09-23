@@ -44,7 +44,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    self.constraint.constant = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    self.constraint.constant = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
     [self.superview layoutIfNeeded];
 }
 

@@ -24,15 +24,15 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    CGPoint translation = (CGPoint)[(NSValue *)[self valueAtTime:time] CGPointValue];
+    CGPoint translation = (CGPoint)((NSValue *)[self valueAtTime:time]).CGPointValue;
     CGAffineTransform translationTransform = CGAffineTransformMakeTranslation(translation.x, translation.y);
     self.view.iftttTranslationTransform = [NSValue valueWithCGAffineTransform:translationTransform];
     CGAffineTransform newTransform = translationTransform;
     if (self.view.iftttRotationTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttRotationTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttRotationTransform).CGAffineTransformValue);
     }
     if (self.view.iftttScaleTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttScaleTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttScaleTransform).CGAffineTransformValue);
     }
     self.view.transform = newTransform;
 }

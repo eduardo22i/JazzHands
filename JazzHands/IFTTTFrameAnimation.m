@@ -38,7 +38,7 @@
     
     // Reset transform to avoid warping
     self.view.transform = CGAffineTransformIdentity;
-    self.view.frame = (CGRect)[(NSValue *)[self valueAtTime:time] CGRectValue];
+    self.view.frame = (CGRect)((NSValue *)[self valueAtTime:time]).CGRectValue;
     
     // Return to original transform
     self.view.transform = tempTransform;

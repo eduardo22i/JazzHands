@@ -33,15 +33,15 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    CGFloat scale = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    CGFloat scale = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(scale, scale);
     self.view.iftttScaleTransform = [NSValue valueWithCGAffineTransform:scaleTransform];
     CGAffineTransform newTransform = scaleTransform;
     if (self.view.iftttRotationTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttRotationTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttRotationTransform).CGAffineTransformValue);
     }
     if (self.view.iftttTranslationTransform) {
-        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttTranslationTransform CGAffineTransformValue]);
+        newTransform = CGAffineTransformConcat(newTransform, (self.view.iftttTranslationTransform).CGAffineTransformValue);
     }
     self.view.transform = newTransform;
 }

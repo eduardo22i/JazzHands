@@ -68,7 +68,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    self.view.layer.timeOffset = (CFTimeInterval)[(NSNumber *)[self valueAtTime:time] doubleValue];
+    self.view.layer.timeOffset = (CFTimeInterval)((NSNumber *)[self valueAtTime:time]).doubleValue;
 }
 
 - (void)setRotationMode:(NSString *)rotationMode

@@ -91,7 +91,7 @@
         animation.pageWidth = self.pageWidth;
     }
     
-    [self setPageOffset:self.pageOffset];
+    self.pageOffset = self.pageOffset;
     [self animateCurrentFrame];
 }
 
@@ -111,7 +111,7 @@
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         [self animateCurrentFrame];
-        [self.scrollView setContentOffset:CGPointMake(futurePixelOffset, 0.f)];
+        (self.scrollView).contentOffset = CGPointMake(futurePixelOffset, 0.f);
     } completion:nil];
 }
 
@@ -139,7 +139,7 @@
 
     [UIView animateWithDuration:duration animations:^{
         [self animateCurrentFrame];
-        [self.scrollView setContentOffset:CGPointMake(futurePixelOffset, 0.f)];
+        (self.scrollView).contentOffset = CGPointMake(futurePixelOffset, 0.f);
     } completion:^(BOOL finished){
         [UIView animateWithDuration:0.1f
                          animations:^{
@@ -260,8 +260,8 @@
                                                                                                                       attribute:attribute];
     
     for (NSUInteger i = 0; i < pages.count; i++) {
-        [xPositionAnimation addKeyframeForTime:(CGFloat)[(NSNumber *)times[i] floatValue]
-                                          page:(CGFloat)[(NSNumber *)pages[i] floatValue]];
+        [xPositionAnimation addKeyframeForTime:(CGFloat)((NSNumber *)times[i]).floatValue
+                                          page:(CGFloat)((NSNumber *)pages[i]).floatValue];
     }
     
     [self.animator addAnimation:xPositionAnimation];
@@ -294,9 +294,9 @@
                                                                                                                       attribute:attribute];
     
     for (NSUInteger i = 0; i < pages.count; i++) {
-        [xPositionAnimation addKeyframeForTime:(CGFloat)[(NSNumber *)times[i] floatValue]
-                                          page:(CGFloat)[(NSNumber *)pages[i] floatValue]
-                                      constant:(CGFloat)[(NSNumber *)offsets[i] floatValue]];
+        [xPositionAnimation addKeyframeForTime:(CGFloat)((NSNumber *)times[i]).floatValue
+                                          page:(CGFloat)((NSNumber *)pages[i]).floatValue
+                                      constant:(CGFloat)((NSNumber *)offsets[i]).floatValue];
     }
     
     [self.animator addAnimation:xPositionAnimation];

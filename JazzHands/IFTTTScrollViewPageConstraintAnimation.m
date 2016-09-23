@@ -64,7 +64,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    CGFloat page = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    CGFloat page = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
     
     CGFloat offset;
     switch (self.attribute) {
@@ -81,7 +81,7 @@
     
     CGFloat constant = 0.f;
     if (!self.constantFilmstrip.isEmpty) {
-        constant = (CGFloat)[(NSNumber *)[self.constantFilmstrip valueAtTime:time] floatValue];
+        constant = (CGFloat)((NSNumber *)[self.constantFilmstrip valueAtTime:time]).floatValue;
     }
     
     self.constraint.constant = (offset + page) * self.pageWidth + self.initialConstraintConstant + constant;

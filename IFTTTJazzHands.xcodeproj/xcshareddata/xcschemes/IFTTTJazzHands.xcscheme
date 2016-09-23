@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9CACEF01D95037A00B06498"
-               BuildableName = "JazzHands.framework"
-               BlueprintName = "JazzHands"
-               ReferencedContainer = "container:JazzHands.xcodeproj">
+               BuildableName = "IFTTTJazzHands.framework"
+               BlueprintName = "IFTTTJazzHands"
+               ReferencedContainer = "container:IFTTTJazzHands.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9CACEF01D95037A00B06498"
-            BuildableName = "JazzHands.framework"
-            BlueprintName = "JazzHands"
-            ReferencedContainer = "container:JazzHands.xcodeproj">
+            BuildableName = "IFTTTJazzHands.framework"
+            BlueprintName = "IFTTTJazzHands"
+            ReferencedContainer = "container:IFTTTJazzHands.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9CACEF01D95037A00B06498"
-            BuildableName = "JazzHands.framework"
-            BlueprintName = "JazzHands"
-            ReferencedContainer = "container:JazzHands.xcodeproj">
+            BuildableName = "IFTTTJazzHands.framework"
+            BlueprintName = "IFTTTJazzHands"
+            ReferencedContainer = "container:IFTTTJazzHands.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

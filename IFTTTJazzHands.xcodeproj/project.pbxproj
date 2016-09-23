@@ -68,7 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9CACEF11D95037A00B06498 /* JazzHands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JazzHands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9CACEF11D95037A00B06498 /* IFTTTJazzHands.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IFTTTJazzHands.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CACEF41D95037A00B06498 /* IFTTTJazzHands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHands.h; sourceTree = "<group>"; };
 		F9CACEF51D95037A00B06498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9CACEFC1D9503ED00B06498 /* IFTTTAlphaAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTAlphaAnimation.h; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		F9CACEF21D95037A00B06498 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9CACEF11D95037A00B06498 /* JazzHands.framework */,
+				F9CACEF11D95037A00B06498 /* IFTTTJazzHands.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F9CACEF01D95037A00B06498 /* JazzHands */ = {
+		F9CACEF01D95037A00B06498 /* IFTTTJazzHands */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9CACEF91D95037A00B06498 /* Build configuration list for PBXNativeTarget "JazzHands" */;
+			buildConfigurationList = F9CACEF91D95037A00B06498 /* Build configuration list for PBXNativeTarget "IFTTTJazzHands" */;
 			buildPhases = (
 				F9CACEEC1D95037A00B06498 /* Sources */,
 				F9CACEED1D95037A00B06498 /* Frameworks */,
@@ -279,9 +279,9 @@
 			);
 			dependencies = (
 			);
-			name = JazzHands;
+			name = IFTTTJazzHands;
 			productName = JazzHands;
-			productReference = F9CACEF11D95037A00B06498 /* JazzHands.framework */;
+			productReference = F9CACEF11D95037A00B06498 /* IFTTTJazzHands.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -300,7 +300,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F9CACEEB1D95037A00B06498 /* Build configuration list for PBXProject "JazzHands" */;
+			buildConfigurationList = F9CACEEB1D95037A00B06498 /* Build configuration list for PBXProject "IFTTTJazzHands" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -312,7 +312,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9CACEF01D95037A00B06498 /* JazzHands */,
+				F9CACEF01D95037A00B06498 /* IFTTTJazzHands */,
 			);
 		};
 /* End PBXProject section */
@@ -499,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9CACEEB1D95037A00B06498 /* Build configuration list for PBXProject "JazzHands" */ = {
+		F9CACEEB1D95037A00B06498 /* Build configuration list for PBXProject "IFTTTJazzHands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9CACEF71D95037A00B06498 /* Debug */,
@@ -508,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9CACEF91D95037A00B06498 /* Build configuration list for PBXNativeTarget "JazzHands" */ = {
+		F9CACEF91D95037A00B06498 /* Build configuration list for PBXNativeTarget "IFTTTJazzHands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9CACEFA1D95037A00B06498 /* Debug */,

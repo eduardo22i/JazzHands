@@ -14,11 +14,11 @@
 
 - (NSNumber *)interpolateTo:(NSNumber *)toValue withProgress:(CGFloat)progress
 {
-    if (strcmp([self objCType], @encode(char)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(char)) == 0)) return self;
+    if (strcmp(self.objCType, @encode(char)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(char)) == 0)) return self;
         return (progress == 0.f ? self : toValue);
     }
-    return @([self.class interpolateCGFloatFrom:(CGFloat)[self floatValue] to:(CGFloat)[toValue floatValue] withProgress:progress]);
+    return @([self.class interpolateCGFloatFrom:(CGFloat)self.floatValue to:(CGFloat)toValue.floatValue withProgress:progress]);
 }
 
 + (CGFloat)interpolateCGFloatFrom:(CGFloat)fromValue to:(CGFloat)toValue withProgress:(CGFloat)progress
@@ -73,53 +73,53 @@
 
 - (NSValue *)interpolateTo:(NSValue *)toValue withProgress:(CGFloat)progress
 {
-    if (strcmp([self objCType], @encode(CGPoint)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(CGPoint)) == 0)) return self;
+    if (strcmp(self.objCType, @encode(CGPoint)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(CGPoint)) == 0)) return self;
         // CGPoint method
-        CGPoint fromPoint = [self CGPointValue];
-        CGPoint toPoint = [toValue CGPointValue];
+        CGPoint fromPoint = self.CGPointValue;
+        CGPoint toPoint = toValue.CGPointValue;
         CGPoint pointBetween = [self.class interpolateCGPointFrom:fromPoint to:toPoint withProgress:progress];
         return [NSValue valueWithCGPoint:pointBetween];
-    } else if (strcmp([self objCType], @encode(CGSize)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(CGSize)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(CGSize)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(CGSize)) == 0)) return self;
         // CGRect method
-        CGSize fromSize = [self CGSizeValue];
-        CGSize toSize = [toValue CGSizeValue];
+        CGSize fromSize = self.CGSizeValue;
+        CGSize toSize = toValue.CGSizeValue;
         CGSize sizeBetween = [self.class interpolateCGSizeFrom:fromSize to:toSize withProgress:progress];
         return [NSValue valueWithCGSize:sizeBetween];
-    } else if (strcmp([self objCType], @encode(CGRect)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(CGRect)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(CGRect)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(CGRect)) == 0)) return self;
         // CGRect method
-        CGRect fromRect = [self CGRectValue];
-        CGRect toRect = [toValue CGRectValue];
+        CGRect fromRect = self.CGRectValue;
+        CGRect toRect = toValue.CGRectValue;
         CGRect rectBetween = [self.class interpolateCGRectFrom:fromRect to:toRect withProgress:progress];
         return [NSValue valueWithCGRect:rectBetween];
-    } else if (strcmp([self objCType], @encode(CGVector)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(CGVector)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(CGVector)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(CGVector)) == 0)) return self;
         // CGVector method
-        CGVector fromVector = [self CGVectorValue];
-        CGVector toVector = [toValue CGVectorValue];
+        CGVector fromVector = self.CGVectorValue;
+        CGVector toVector = toValue.CGVectorValue;
         CGVector vectorBetween = [self.class interpolateCGVectorFrom:fromVector to:toVector withProgress:progress];
         return [NSValue valueWithCGVector:vectorBetween];
-    } else if (strcmp([self objCType], @encode(UIEdgeInsets)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(UIEdgeInsets)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(UIEdgeInsets)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(UIEdgeInsets)) == 0)) return self;
         // UIEdgeInsets method
-        UIEdgeInsets fromInsets = [self UIEdgeInsetsValue];
-        UIEdgeInsets toInsets = [toValue UIEdgeInsetsValue];
+        UIEdgeInsets fromInsets = self.UIEdgeInsetsValue;
+        UIEdgeInsets toInsets = toValue.UIEdgeInsetsValue;
         UIEdgeInsets insetsBetween = [self.class interpolateUIEdgeInsetsFrom:fromInsets to:toInsets withProgress:progress];
         return [NSValue valueWithUIEdgeInsets:insetsBetween];
-    } else if (strcmp([self objCType], @encode(UIOffset)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(UIOffset)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(UIOffset)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(UIOffset)) == 0)) return self;
         // UIOffset method
-        UIOffset fromOffset = [self UIOffsetValue];
-        UIOffset toOffset = [toValue UIOffsetValue];
+        UIOffset fromOffset = self.UIOffsetValue;
+        UIOffset toOffset = toValue.UIOffsetValue;
         UIOffset offsetBetween = [self.class interpolateUIOffsetFrom:fromOffset to:toOffset withProgress:progress];
         return [NSValue valueWithUIOffset:offsetBetween];
-    } else if (strcmp([self objCType], @encode(CGAffineTransform)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(CGAffineTransform)) == 0)) return self;
+    } else if (strcmp(self.objCType, @encode(CGAffineTransform)) == 0) {
+        if (!(strcmp(toValue.objCType, @encode(CGAffineTransform)) == 0)) return self;
         // CGAffineTransform method
-        CGAffineTransform fromTransform = [self CGAffineTransformValue];
-        CGAffineTransform toTransform = [toValue CGAffineTransformValue];
+        CGAffineTransform fromTransform = self.CGAffineTransformValue;
+        CGAffineTransform toTransform = toValue.CGAffineTransformValue;
         CGAffineTransform transformBetween = [self.class interpolateCGAffineTransformFrom:fromTransform to:toTransform withProgress:progress];
         return [NSValue valueWithCGAffineTransform:transformBetween];
     }

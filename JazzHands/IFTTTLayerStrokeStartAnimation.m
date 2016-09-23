@@ -59,7 +59,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    self.layer.timeOffset = (CFTimeInterval)[(NSNumber *)[self valueAtTime:time] doubleValue];
+    self.layer.timeOffset = (CFTimeInterval)((NSNumber *)[self valueAtTime:time]).doubleValue;
 }
 
 - (void)createBasicAnimation

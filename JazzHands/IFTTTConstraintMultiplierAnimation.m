@@ -60,7 +60,7 @@
 - (void)animate:(CGFloat)time
 {
     if (!self.hasKeyframes) return;
-    CGFloat multiplier = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    CGFloat multiplier = (CGFloat)((NSNumber *)[self valueAtTime:time]).floatValue;
     
     CGFloat referenceAttributeValue;
     

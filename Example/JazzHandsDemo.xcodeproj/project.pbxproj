@@ -366,11 +366,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03063EFA17F5FAAD007D7A97 /* Build configuration list for PBXNativeTarget "JazzHandsTests" */;
 			buildPhases = (
-				F2C22B261B9CB7C052518749 /* Check Pods Manifest.lock */,
 				03063EE217F5FAAD007D7A97 /* Sources */,
 				03063EE317F5FAAD007D7A97 /* Frameworks */,
 				03063EE417F5FAAD007D7A97 /* Resources */,
-				FD96E5672CCFA6689755A530 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -446,21 +444,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F2C22B261B9CB7C052518749 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		F9CACFE71D9509D100B06498 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,21 +457,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		FD96E5672CCFA6689755A530 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazzHandsTests/Pods-JazzHandsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
